@@ -1,0 +1,14 @@
+<div class="finder">
+     <h1>Find GitHub User</h1>
+    <div class="pseudo-search">
+        <input type="text" [formControl]="searchControl"> 
+        <i class="fa-brands fa-github"></i>
+        <button (click)="buscarUser($event)"><i class="fas fa-search"></i></button>
+    </div>    
+</div>  
+<dir *ngIf="!error">
+    <app-user *ngIf="user" [user]="user"></app-user>
+</dir>
+<app-not-found *ngIf="error"></app-not-found>
+
+
